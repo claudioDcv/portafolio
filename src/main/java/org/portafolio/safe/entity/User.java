@@ -98,10 +98,7 @@ public class User implements Serializable {
 	@ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
 		name = "users_profiles",
-		joinColumns = @JoinColumn(
-			name = "users_fk",
-			referencedColumnName = "user_id"
-		),
+		joinColumns = @JoinColumn(name="users_fk", referencedColumnName="user_id"),
 		inverseJoinColumns = @JoinColumn(
 			name = "profiles_fk",
 			referencedColumnName = "profile_id"
